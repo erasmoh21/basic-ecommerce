@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sneakers Shop</title>
     <link rel="stylesheet" href="../styles/style.css">
-    <script src="../scripts/index.js" defer></script>
+    <script src="../scripts/index.js" defer type="module"></script>
 </head>
 <body>
     <header>
@@ -17,22 +17,22 @@
                 </div>
                 <div class="contenedorNavHeader">
                     <nav>
-                        <a href="">Collections</a>
-                        <a href="">Mens</a>
-                        <a href="">Women</a>
-                        <a href="">About</a>
-                        <a href="">Contact</a>
+                        <a href="" tabindex="1">Collections</a>
+                        <a href="" tabindex="2">Mens</a>
+                        <a href="" tabindex="3">Women</a>
+                        <a href="" tabindex="4">About</a>
+                        <a href="" tabindex="5">Contact</a>
                     </nav>
                 </div>
             </div>
 
             <div class="contenedorHeader-2">
-                <figure class="contenedorCartIcon">
-                    <img src="../../images/icon-cart.svg" alt="">
+                <figure class="contenedorCartIcon" tabindex="6">
+                    <img src="../../images/icon-cart.svg" alt="icono del carro de compras">
                 </figure>
 
                 <section class="contenedorBannerListaProductosCarro">
-                    <div class="otro">                   
+                    <div class="contenedorElementosBanner">                   
                         <div class="contenedorTituloCart">
                             <div>
                                 <p>Cart</p>
@@ -41,14 +41,14 @@
      
                         <div class="contenedorListaCarrito">
                             <div>
-                                <p>Your cart is empty</p>
+                                <p>Your cart is empty.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <figure class="contenedorImgUsuario">
-                    <img src="../../images/image-avatar.png" alt="">
+                <figure class="contenedorImgUsuario" tabindex="7">
+                    <img src="../../images/image-avatar.png" alt="imagen de usuario">
                 </figure>
             </div>
         </div>
@@ -57,15 +57,15 @@
     <main>
         <div class="contenedorPrincipalMain">
             <section class="seccionVistaDeZapatos">
-                <figure class="contenedorZapatoIndividual">
-                    <img src="../../images/image-product-1.jpg" alt="">
+                <figure class="contenedorZapatoIndividual" tabindex="8">
+                    <img src="../../images/image-product-1.jpg" alt="foto del zapato">
                 </figure>
 
                 <figure class="contenedorDeZapatos">
-                    <img src="../../images/image-product-1-thumbnail.jpg" alt="">
-                    <img src="../../images/image-product-2-thumbnail.jpg" alt="">
-                    <img src="../../images/image-product-3-thumbnail.jpg" alt="">
-                    <img src="../../images/image-product-4-thumbnail.jpg" alt="">
+                    <img src="../../images/image-product-1-thumbnail.jpg" alt="muestra de zapato en miniatura" tabindex="9">
+                    <img src="../../images/image-product-2-thumbnail.jpg" alt="muestra de zapato en miniatura" tabindex="10">
+                    <img src="../../images/image-product-3-thumbnail.jpg" alt="muestra de zapato en miniatura" tabindex="11">
+                    <img src="../../images/image-product-4-thumbnail.jpg" alt="muestra de zapato en miniatura" tabindex="12">
                 </figure>
 
             </section>
@@ -91,18 +91,17 @@
 
                     <div class="contenedorAniadirCarro">
                         <div class="contenedorCantidadProductos">
-                            <p class="simbolos disminucion">-</p>
+                            <p class="simbolos disminucion" tabindex="13">-</p>
                             <p class="numero">0</p>
-                            <p class="simbolos aumento">+</p>
+                            <p class="simbolos aumento" tabindex="14">+</p>
                         </div>
 
-                        <div class="btn-aniadirCarro">
+                        <div class="btn-aniadirCarro" tabindex="15">
                             <p>Add to cart</p>
                         </div>
                     </div>
 
                 </div>
-
             </section>
         </div>
 

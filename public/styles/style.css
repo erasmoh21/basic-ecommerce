@@ -63,10 +63,14 @@ body {
 }
 
 .contenedorHeader .contenedorHeader-2 .contenedorCartIcon {
+    position: relative;
+    z-index: 2;
     cursor: pointer;
 }
 
 .contenedorHeader .contenedorHeader-2 .contenedorImgUsuario {
+    position: relative;
+    z-index: 2;
     margin-left: 2rem;
 }
 .contenedorHeader .contenedorHeader-2 .contenedorImgUsuario img {
@@ -86,13 +90,12 @@ body {
     right: 0px;
 }
 
-.contenedorBannerListaProductosCarro .otro {
-    display: flex;
+.contenedorBannerListaProductosCarro .contenedorElementosBanner {
+    display: none;
     flex-direction: column;
     position: relative;
     top: 9rem;
-    right: 12rem;
-    z-index: 2;
+    right: 8.5rem;
     box-shadow: -8px 8px 20px 2px rgba(0, 0, 0, .1);
     background-color: white;
     border-radius: 7px;
@@ -100,7 +103,7 @@ body {
     height: 14rem;
 }
 
-.contenedorBannerListaProductosCarro .otro .contenedorTituloCart {
+.contenedorBannerListaProductosCarro .contenedorElementosBanner .contenedorTituloCart {
     display: flex;
     padding: 1rem;
     border-bottom: 1px solid var(--grayish-blue);
@@ -108,7 +111,7 @@ body {
     font-weight: bolder;
 }
 
-.contenedorBannerListaProductosCarro .otro .contenedorListaCarrito {
+.contenedorBannerListaProductosCarro .contenedorElementosBanner .contenedorListaCarrito {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,6 +147,13 @@ body {
     height: 5rem;
     border-radius: 10px;
     cursor: pointer;
+}
+
+
+.contenedorPrincipalMain .seccionVistaDeZapatos .contenedorDeZapatos img:focus{
+    outline: 2px solid var(--color-primary);
+    opacity: .4;
+    
 }
 
 /*seccion de compra*/
