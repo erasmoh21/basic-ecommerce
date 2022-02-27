@@ -27,6 +27,9 @@
             </div>
 
             <div class="contenedorHeader-2">
+                <div class="numeroDeProductos">
+                </div>
+
                 <figure class="contenedorCartIcon" tabindex="6">
                     <img src="../../images/icon-cart.svg" alt="icono del carro de compras">
                 </figure>
@@ -54,11 +57,15 @@
         </div>
     </header>
 
+    <section class="contenedorPopUpImagenes">
+        
+
+    </section>
     <main>
         <div class="contenedorPrincipalMain">
             <section class="seccionVistaDeZapatos">
                 <figure class="contenedorZapatoIndividual" tabindex="8">
-                    <img src="../../images/image-product-1.jpg" alt="foto del zapato">
+                    <img src="../../images/image-product-1.jpg" alt="foto del zapato" class="imgIndividual">
                 </figure>
 
                 <figure class="contenedorDeZapatos">
@@ -69,6 +76,7 @@
                 </figure>
 
             </section>
+            
 
             <section class="seccionCompraZapato">
                 <div class="contenedorElementosSeccionZapato">
@@ -89,23 +97,22 @@
                         </div>
                     </div>
 
-                    <div class="contenedorAniadirCarro">
-                        <div class="contenedorCantidadProductos">
-                            <p class="simbolos disminucion" tabindex="13">-</p>
-                            <p class="numero">0</p>
-                            <p class="simbolos aumento" tabindex="14">+</p>
+                    <form id="form">
+                        <div class="contenedorAniadirCarro">
+                            <div class="contenedorCantidadProductos">
+                                <button class="simbolos disminucion" tabindex="13">-</button>
+                                <p class="numero">0</p>
+                                <button class="simbolos aumento" tabindex="14">+</button>
+                            </div>
+    
+                            <button class="btn-aniadirCarro" tabindex="15" type="submit">
+                                Add to cart
+                            </button>
                         </div>
-
-                        <div class="btn-aniadirCarro" tabindex="15">
-                            <p>Add to cart</p>
-                        </div>
-                    </div>
-
+                    </form>
                 </div>
             </section>
         </div>
-
     </main>
-    
 </body>
 </html>

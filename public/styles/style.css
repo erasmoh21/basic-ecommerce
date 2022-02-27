@@ -62,6 +62,23 @@ body {
     align-items: center;
 }
 
+.numeroDeProductos {
+    display: none;
+    position: relative;
+    z-index: 3;
+    bottom: .8rem;
+    left: 2.2rem;
+    padding: .1px 10px;
+    background-color: var(--color-primary);
+    border-radius: 20px;
+}
+
+.numeroDeProductos p {
+    color: var(--light-grayish-blue);
+    font-weight: bolder;
+    font-size: 12px;
+}
+
 .contenedorHeader .contenedorHeader-2 .contenedorCartIcon {
     position: relative;
     z-index: 2;
@@ -96,7 +113,7 @@ body {
     position: relative;
     top: 9rem;
     right: 8.5rem;
-    box-shadow: -8px 8px 20px 2px rgba(0, 0, 0, .1);
+    box-shadow: -10px 2px 20px 2px rgba(0, 0, 0, .1);
     background-color: white;
     border-radius: 7px;
     width: 20rem;
@@ -116,10 +133,48 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+
+.contenedorBannerListaProductosCarro .contenedorElementosBanner .contenedorListaCarrito div p {
     color: var(--dark-grayish-blue);
     font-weight: bolder;
 }
 
+.productosEnCarro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.productosEnCarro div figure img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.productosEnCarro .productosEnCarro-elementos {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.productosEnCarro .productosEnCarro-elementos .contenedorIconoDelete figure img {
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+}
+
+
+.productosEnCarro .productosEnCarro-checkout {
+    background-color: var(--color-primary);
+    color: var(--white);
+    font-weight: bolder;
+    align-self: center;
+    padding: 15px 110px;
+    border-radius: 7px;
+    cursor: pointer;
+}
 
 /*Seccion Main*/
 
@@ -130,10 +185,12 @@ body {
     gap: 4rem;
 }
 
+/*Seccion main fotos del producto*/
 .contenedorPrincipalMain .seccionVistaDeZapatos .contenedorZapatoIndividual img {
     width: 25rem;
     height:25rem;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .contenedorPrincipalMain .seccionVistaDeZapatos .contenedorDeZapatos {
@@ -153,10 +210,16 @@ body {
 .contenedorPrincipalMain .seccionVistaDeZapatos .contenedorDeZapatos img:focus{
     outline: 2px solid var(--color-primary);
     opacity: .4;
-    
 }
 
-/*seccion de compra*/
+/*POP UP DE IMAGENES EN EL MAIN*/
+.contenedorPopUpImagenes {
+    position: fixed;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+/*seccion Main de compra*/
 
 .contenedorPrincipalMain .seccionCompraZapato {
     min-height: 100%;
@@ -190,6 +253,7 @@ body {
 
 .contenedorPrincipalMain .seccionCompraZapato .contenedorElementosSeccionZapato .contenedorPrecio div {
     display: flex;
+    margin-bottom: 7px;
 }
 
 .contenedorPrincipalMain .seccionCompraZapato .contenedorElementosSeccionZapato .contenedorPrecio .precio {
@@ -231,6 +295,8 @@ body {
 }
 
 .contenedorPrincipalMain .seccionCompraZapato .contenedorElementosSeccionZapato .contenedorCantidadProductos .simbolos {
+    border: none;
+    background-color: transparent;
     color: var(--color-primary);
     font-weight: bolder; 
     font-size: 1.5rem;
@@ -242,7 +308,7 @@ body {
     font-weight: 700;
 } 
 
-.contenedorPrincipalMain .seccionCompraZapato .contenedorElementosSeccionZapato .btn-aniadirCarro p::before {
+.contenedorPrincipalMain .seccionCompraZapato .contenedorElementosSeccionZapato .btn-aniadirCarro::before {
     content: url(../../images/icon-cart-btnCompra.svg);
     margin-right: 1rem;
 }
@@ -253,6 +319,7 @@ body {
     font-weight: 900;
     padding: 10px 70px; 
     border-radius: 7px;
+    border: none;
     cursor: pointer;
     box-shadow: 0 5px 8px 2px hsl(30, 100%, 90%);
 }
