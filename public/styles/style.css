@@ -17,24 +17,26 @@
 
 }
 
-body {
-    margin: 0 10rem;
-}
-
 /*Seccion header*/
 
 .contenedorHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
+    margin: 1rem 10rem 0 10rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--grayish-blue);
 }
 
+/*Seccion header 1(titulo - nav)*/
+
 .contenedorHeader .contenedorHeader-1 {
     display: flex;
     align-items: center;
+}
+
+.contenedorHeader .contenedorHeader-1 .contenedor-bars {
+    display: none;
 }
 
 .contenedorHeader .contenedorHeader-1 .contenedorTituloHeader {
@@ -56,6 +58,8 @@ body {
     color: var(--Very-vark-blue);
     border-bottom: 3px solid var(--color-primary);
 }
+
+/*Seccion header 2 (carro de compras - perfil usuario)*/
 
 .contenedorHeader .contenedorHeader-2 {
     display: flex;
@@ -180,9 +184,11 @@ body {
 
 .contenedorPrincipalMain {
     display: flex;
-    margin: 5rem 3rem 0 3rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 4.5rem;
+    margin: 5rem 9rem 5rem 15rem;
     max-height: 100vh;
-    gap: 4rem;
 }
 
 /*Seccion main fotos del producto*/
@@ -199,7 +205,7 @@ body {
     margin-top: 1rem;
 }
 
-.contenedorPrincipalMain .seccionVistaDeZapatos .contenedorDeZapatos img{
+.contenedorPrincipalMain .seccionVistaDeZapatos .contenedorDeZapatos .imagenes{
     width: 5rem;
     height: 5rem;
     border-radius: 10px;
@@ -207,23 +213,85 @@ body {
 }
 
 
-.contenedorPrincipalMain .seccionVistaDeZapatos .contenedorDeZapatos img:focus{
+.contenedorPrincipalMain .seccionVistaDeZapatos .contenedorDeZapatos .imagenes:focus{
     outline: 2px solid var(--color-primary);
     opacity: .4;
 }
 
 /*POP UP DE IMAGENES EN EL MAIN*/
 .contenedorPopUpImagenes {
+    display: none;
     position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 5;
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, .8);
 }
 
+.contenedorPopUpImagenes .contenedorElementosPopUp {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorPopUpImagenes .contenedorElementosPopUp .contenedorBotonClose{
+    position: relative;
+    left: 11.5rem;
+    bottom: .5rem;
+    cursor: pointer;
+}
+
+.contenedorPopUpImagenes .contenedorElementosPopUp .contenedorImagenPrincipal {
+    display: flex;
+    align-items: center;
+}
+
+.contenedorPopUpImagenes .contenedorElementosPopUp .contenedorImagenPrincipal .img-principal {
+    width: 24rem;
+    height: 24rem;
+    border-radius: 10px;
+}
+
+.contenedorPopUpImagenes .contenedorElementosPopUp .contenedorImagenes {
+    margin-top: 1rem;
+}
+
+.contenedorPopUpImagenes .contenedorElementosPopUp .contenedorImagenes figure .imagenes {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.contenedorPopUpImagenes .contenedorElementosPopUp .contenedorImagenes figure .imagenes:hover {
+    outline: 2px solid var(--color-primary);
+    opacity: .5;
+}
+
+.contenedorPopUpImagenes .contenedorElementosPopUp .contenedorImagenPrincipal .contenedorBtn-next,
+.contenedorPopUpImagenes .contenedorElementosPopUp .contenedorImagenPrincipal .contenedorBtn-previous {
+    border-radius: 5em;
+    padding: .5rem;
+    background-color: var(--white);
+}
+
+.contenedorPopUpImagenes .contenedorElementosPopUp .contenedorImagenPrincipal .contenedorBtn-previous img, 
+.contenedorPopUpImagenes .contenedorElementosPopUp .contenedorImagenPrincipal .contenedorBtn-next img {
+    cursor: pointer;
+}
+.contenedorPopUpImagenes .contenedorElementosPopUp .contenedorImagenPrincipal .contenedorBtn-previous img:hover, 
+.contenedorPopUpImagenes .contenedorElementosPopUp .contenedorImagenPrincipal .contenedorBtn-next img:hover {
+    color: var(--color-primary);
+}
 /*seccion Main de compra*/
 
 .contenedorPrincipalMain .seccionCompraZapato {
-    min-height: 100%;
-}
+    width: 50%;
+}  
 
 .contenedorPrincipalMain .seccionCompraZapato .contenedorElementosSeccionZapato {
     display: flex;
@@ -322,4 +390,10 @@ body {
     border: none;
     cursor: pointer;
     box-shadow: 0 5px 8px 2px hsl(30, 100%, 90%);
+}
+
+/*MEDIA QUERIES*/
+
+@media all and (max-width: 500px) {
+    
 }
