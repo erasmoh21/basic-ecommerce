@@ -10,6 +10,11 @@ const elementosHtml = {
     formulario: document.getElementById('form'),
     numeroDeProductos: document.querySelector('.numeroDeProductos'),
     contenedorListaCarrito: document.querySelector('.contenedorListaCarrito'),
-    contenedorHeader2: document.querySelector('.contenedorHeader-2')
+    contenedorHeader2: document.querySelector('.contenedorHeader-2'),
+    elementoContenedorListaCarro: document.querySelector('.contenedorListaCarrito div'),
+    contenedorPopUp: document.querySelector('.contenedorPopUpImagenes'),
+    contenedorElementosPopUp: document.querySelector('.contenedorElementosPopUp'),
+    contenedorBotonClose : document.querySelector('.contenedorBotonClose'),
+    imagenPrincipalPopUp: document.querySelector('.img-principal')
 }
 export default elementosHtml
