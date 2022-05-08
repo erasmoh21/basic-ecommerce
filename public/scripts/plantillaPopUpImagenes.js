@@ -3,18 +3,18 @@ export default function plantillaPopUpImagenes(src) {
         <div class="contenedorElementosPopUp">
             <div class="contenedorBotonClose">
                 <figure>
-                    <img src="../../images/icon-close.svg" tabindex="1">
+                    <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg" ><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#FFFFFF" class="icon-close" fill-rule="evenodd"/></svg>
                 </figure>
             </div>
 
             <div>
                 <figure class="contenedorImagenPrincipal">
                     <div class='contenedorBtn-previous'>
-                        <img src="../../images/icon-previous.svg" alt="icono de flecha a la derecha" class="iconPrevious">
+                        <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" class="iconPrevious"/></svg>
                     </div>
                     <img src="${src}" class="img-principal" alt="Imagen de zapato" tabindex="3">
                     <div class="contenedorBtn-next">
-                        <img src="../../images/icon-next.svg" alt="icono de flecha a la izquierda" class="iconNext">
+                        <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" class="iconNext"/></svg>
                     </div>
                 </figure>
             </div>
