@@ -35,6 +35,7 @@ elementosHtml.botonAumento.addEventListener('click',(e) => {
 
 elementosHtml.botonDisminuir.addEventListener('click',(e) => {
     e.preventDefault()
+
     if(parseInt(elementosHtml.cantidadDeProducto.textContent) == 0) {
         return
     }
@@ -53,7 +54,7 @@ elementosHtml.formulario.addEventListener('submit', (e) => {
     else {
         elementosHtml.elementoContenedorListaCarro.style.display = 'none'
         elementosHtml.numeroDeProductos.innerHTML = `<p>${cantidadDeProducto+=parseInt(elementosHtml.cantidadDeProducto.textContent)}</p>`
-        elementosHtml.contenedorListaCarrito.innerHTML = plantillaDeProductosEnCarrito(parseInt(cantidadDeProducto)) 
+        elementosHtml.contenedorListaCarrito.innerHTML = plantillaDeProductosEnCarrito(cantidadDeProducto) 
         elementosHtml.numeroDeProductos.style.display = "block"
         elementosHtml.cantidadDeProducto.textContent = '0'
     }
@@ -65,7 +66,9 @@ elementosHtml.contenedorZapatoIndividual.addEventListener('click',() => {
 })
 
 elementosHtml.contenedorPopUp.addEventListener('click',(e) => {
-    if(e.target && e.target.getAttribute('src') == "../../images/icon-close.svg") {
+    const iconClose = document.querySelector('.icon-close')
+    
+    if(e.target && e.target.classList.contains('icon-close') && e.target.tagName == 'path') {
         elementosHtml.contenedorPopUp.style.display = "none"
     }
 })
@@ -73,17 +76,8 @@ elementosHtml.contenedorPopUp.addEventListener('click',(e) => {
 elementosHtml.contenedorPopUp.addEventListener('click',(e) => {
     const arrayDeImagenes = ["../../images/image-product-1.jpg","../../images/image-product-2.jpg","../../images/image-product-3.jpg","../../images/image-product-4.jpg"]
 
-    if(e.target.className == "iconPrevious") {
-        if(arrayDeImagenes[0] == document.querySelector('.img-principal').getAttribute('src')) return
-
-        arrayDeImagenes.forEach((imagen,i) => {
-            if(imagen == document.querySelector('.img-principal').getAttribute('src')) {
-                document.querySelector('.img-principal').setAttribute('src',arrayDeImagenes[i-1])
-                return
-            }
-        })
-    }
-    if(e.target.className == "iconNext") {
+    if(e.target.classList.contains("iconNext")  && e.target.tagName == 'path' && e.target) {
+        console.log(e.target.classList.contains("iconNext"))
         if(arrayDeImagenes[3] == document.querySelector('.img-principal').getAttribute('src')) return
         let validador = false 
 
@@ -92,6 +86,17 @@ elementosHtml.contenedorPopUp.addEventListener('click',(e) => {
             if(imagen == document.querySelector('.img-principal').getAttribute('src')) {
                 document.querySelector('.img-principal').setAttribute('src',arrayDeImagenes[i+1])
                 validador = true
+            }
+        })
+    }
+    if(e.target.classList.contains("iconPrevious") && e.target.tagName == 'path' && e.target) {
+        console.log(e.target.classList.contains('iconPrevious'))
+        if(arrayDeImagenes[0] == document.querySelector('.img-principal').getAttribute('src')) return
+
+        arrayDeImagenes.forEach((imagen,i) => {
+            if(imagen == document.querySelector('.img-principal').getAttribute('src')) {
+                document.querySelector('.img-principal').setAttribute('src',arrayDeImagenes[i-1])
+                return
             }
         })
     }

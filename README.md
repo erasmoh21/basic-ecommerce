@@ -6,4 +6,4 @@
 
 ### Esto es una pagina de E-commerce basica donde se implementa HTML,CSS y Javascript para agregar funcionalidades y dinamismo a la pagina, tales como, poder agregar productos al carrito y poder ver las distintas fotos del producto
 
-[Click aqui para ir a la pagina](https://erasmoh24.github.io/ecommerce-basico/public/views/index.html)
+[Click here for to go to the Webpage](https://erasmoh24.github.io/ecommerce-basico/public/views/index.html)

@@ -14,10 +14,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Kumbh Sans', sans-serif;
-
 }
 
 /*Seccion header*/
+
+.contenedorBarHeader {
+    display: none;
+}
 
 .contenedorHeader {
     display: flex;
@@ -104,7 +107,7 @@
     border: 2px solid var(--color-primary);
 }
 
-/*Banner sobre informacion del carro de compras*/
+/*Banner about information of the car of buying*/
 
 .contenedorBannerListaProductosCarro {
     position: absolute;
@@ -129,7 +132,6 @@
     padding: 1rem;
     border-bottom: 1px solid var(--grayish-blue);
     color:var(--Very-vark-blue);
-    font-weight: bolder;
 }
 
 .contenedorBannerListaProductosCarro .contenedorElementosBanner .contenedorListaCarrito {
@@ -139,7 +141,7 @@
     height: 100%;
 }
 
-.contenedorBannerListaProductosCarro .contenedorElementosBanner .contenedorListaCarrito div p {
+.contenedorBannerListaProductosCarro .contenedorElementosBanner .contenedorListaCarrito div .textCarEmpty {
     color: var(--dark-grayish-blue);
     font-weight: bolder;
 }
@@ -152,8 +154,8 @@
 }
 
 .productosEnCarro div figure img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 8px;
 }
 
@@ -164,13 +166,12 @@
 }
 
 .productosEnCarro .productosEnCarro-elementos .contenedorIconoDelete figure img {
-    width: 21px;
-    height: 21px;
+    width: 19px;
+    height: 19px;
     cursor: pointer;
 }
 
-
-.productosEnCarro .productosEnCarro-checkout {
+.productosEnCarro .productosEnCarro-checkout { 
     background-color: var(--color-primary);
     color: var(--white);
     font-weight: bolder;
@@ -245,6 +246,10 @@
     cursor: pointer;
 }
 
+.contenedorElementosPopUp .contenedorBotonClose figure .icon-close:hover {
+    fill: var(--color-primary);
+}
+
 .contenedorPopUpImagenes .contenedorElementosPopUp .contenedorImagenPrincipal {
     display: flex;
     align-items: center;
@@ -272,8 +277,10 @@
     opacity: .5;
 }
 
+
 .contenedorPopUpImagenes .contenedorElementosPopUp .contenedorImagenPrincipal .contenedorBtn-next,
 .contenedorPopUpImagenes .contenedorElementosPopUp .contenedorImagenPrincipal .contenedorBtn-previous {
+    width: 38px;
     border-radius: 5em;
     padding: .5rem;
     background-color: var(--white);
@@ -394,6 +401,25 @@
 
 /*MEDIA QUERIES*/
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 971px) {
+    .contenedorBarHeader {
+        display: block;
+        margin-right: 1rem;
+    }
+
+    .contenedorNavHeader {
+        display: none;
+    }
+    .contenedorHeader {
+        margin: 1rem 1rem 0 1rem;
+        border-bottom: none;
+    }
     
+    .contenedorPrincipalMain {
+        margin-left: 0;
+    }
+
+    .contenedorPrincipalMain .seccionVistaDeZapatos .contenedorDeZapatos {
+        display: none;
+    }
 }
