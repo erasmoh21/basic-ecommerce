@@ -15,6 +15,11 @@ const elementosHtml = {
     contenedorPopUp: document.querySelector('.contenedorPopUpImagenes'),
     contenedorElementosPopUp: document.querySelector('.contenedorElementosPopUp'),
     contenedorBotonClose : document.querySelector('.contenedorBotonClose'),
-    imagenPrincipalPopUp: document.querySelector('.img-principal')
+    imagenPrincipalPopUp: document.querySelector('.img-principal'),
+    contenedorBarHeader: document.querySelector('.contenedorBarHeader'),
+    barWrap: document.querySelector('.bar-wrap'),
+    iconCloseBarHeader: document.getElementById('closeBar'),
+    iconPreviousMobile: document.querySelector('.iconPreviousMobile'),
+    iconNextMobile: document.querySelector('.iconNextMobile')
 }
 export default elementosHtml
